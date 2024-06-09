@@ -2,7 +2,7 @@
 This repo is to create a music mixer mechanism for Multimedia Authoring 2 class's project.
 
 # Room Music Mixer
-This is a repo to create a Music Mixer concept web-apps where user can interact with the interactive environment/UI of the website. Here user can open some windows and switch the Timeframe to listen to different soothing environment sound. Isn't it interesting! Have a rest in our chillin room.
+This is a repo to create a Music Mixer concept web-apps where user can interact with the interactive environment/UI of the website. Here user can open some windows and switch the Timeframe to listen to different soothing environment sound. Isn't it interesting! Have a rest in our chilling room.
 
 ## Installation
 No installation is required.

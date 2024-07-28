@@ -1,0 +1,655 @@
+#header {
+  display: flex;
+  justify-items: left;
+  align-items: center;
+  height: 4rem;
+  background-color: black;
+  z-index: 2;
+}
+
+#site {
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 5rem;
+  color: white;
+  pointer-events: none;
+}
+
+#link {
+  display: flex;
+  margin-left: 200px;
+}
+
+#link p {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 300;
+  margin-left: 4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+#link p:hover {
+  color: yellow;
+}
+
+#lightBox,
+#lightBoxCredit {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  padding: 2rem 5rem 2rem 5rem;
+  background-color: yellow;
+  top: 4rem;
+}
+
+#lightBox p,
+#lightBoxCredit p {
+  font-family: sans-serif;
+  font-size: clamp(0.5rem, 5vw, 2.5rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#theRoom {
+  position: relative;
+}
+
+#aRoom {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#theWalls {
+  position: absolute;
+  display: flex;
+}
+
+.darkmode {
+  filter: brightness(60%);
+}
+
+#clockButton {
+  position: absolute;
+  width: 180px;
+  margin-top: 55vh;
+  margin-left: 34vw;
+  cursor: pointer;
+}
+
+#leftWall {
+  width: 11vw;
+  height: 40vh;
+  margin-top: 18vh;
+  margin-left: 5vw;
+  background-position: center;
+  background-image: url(../images/gif/dayL.gif);
+  clip-path: polygon(0% 0%, 100% 15%, 100% 92%, 0% 100%);
+}
+
+#middleWall {
+  width: 32vw;
+  height: 25vh;
+  margin-top: 27vh;
+  margin-left: 17.5vw;
+  background-image: url(../images/gif/dayM.gif);
+  background-position: center;
+}
+
+#rightWall {
+  width: 11vw;
+  height: 40vh;
+  margin-top: 18vh;
+  margin-left: 18.3vw;
+  background-image: url(../images/gif/dayR.gif);
+  background-position: center;
+  clip-path: polygon(0% 16%, 100% 0%, 100% 100%, 0% 92%);
+}
+
+#deco {
+  width: 100vw;
+  position: absolute;
+}
+
+#deco-m {
+  position: absolute;
+  width: 12.5vw;
+  margin-top: 30vh;
+  margin-left: 62.5vw;
+}
+
+#deco-L {
+  position: absolute;
+  width: 22.5vw;
+  top: 35vh;
+}
+
+#deco-b {
+  position: absolute;
+  width: 60vw;
+  height: 20vh;
+  margin-top: 80vh;
+  margin-left: 20vw;
+}
+
+#deco-r {
+  position: absolute;
+  width: 10vh;
+  margin-left: 78.5vw;
+  margin-top: 45vh;
+}
+
+#deco-marbel {
+  position: absolute;
+  width: 30vh;
+  margin-left: 25vw;
+  margin-top: 45vh;
+}
+
+#deco-sofa {
+  position: absolute;
+  width: 350px;
+  margin-top: 47.5vh;
+  margin-left: 37vw;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#deco-star {
+  position: absolute;
+  width: 10vw;
+  margin-top: 16vh;
+  margin-left: 50%;
+}
+
+#deco-t {
+  position: absolute;
+  width: 40vw;
+  height: 9.5vh;
+  opacity: 0.85;
+  margin-left: 18.5vw;
+  margin-top: 3.25vh;
+}
+
+#deco-m-2 {
+  position: absolute;
+  width: 10vw;
+  height: 15vh;
+  margin-top: 57.5vh;
+  margin-left: 66.8vw;
+}
+
+#deco-text {
+  position: absolute;
+  width: 300px;
+  margin-left: 50vw;
+  margin-top: 55vh;
+}
+
+#window {
+  position: absolute;
+}
+
+#window-l {
+  position: absolute;
+  width: 13.5vw;
+  height: 52.5vh;
+  margin-top: 10vh;
+  margin-left: 3vw;
+}
+
+#window-c {
+  position: absolute;
+  width: 35vw;
+  height: 30vh;
+  margin-left: 32.5vw;
+  margin-top: 24.5vh;
+}
+
+#window-r {
+  position: absolute;
+  width: 13.5vw;
+  height: 52.5vh;
+  margin-top: 10vh;
+  margin-left: 82.5vw;
+}
+
+#dropbox {
+  position: absolute;
+}
+
+.dropzone {
+  background-color: aquamarine;
+  opacity: 0;
+}
+
+#dropbox-l {
+  position: absolute;
+  width: 6.75vw;
+  height: 44vh;
+  margin-top: 16vh;
+  margin-left: 4.5vw;
+  clip-path: polygon(0% 0%, 100% 13%, 100% 93%, 0% 100%);
+}
+
+#dropbox-c {
+  position: absolute;
+  width: 16.25vw;
+  height: 24.5vh;
+  margin-top: 28.15vh;
+  margin-left: 49.75vw;
+}
+
+#dropbox-r {
+  position: absolute;
+  width: 6.8vw;
+  height: 44.25vh;
+  margin-top: 15.9vh;
+  margin-left: 87.85vw;
+  clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 93%);
+}
+
+#pickZone {
+  position: absolute;
+}
+
+#pick-win-l {
+  position: absolute;
+  width: 4.75vw;
+  height: 35.5vh;
+  margin-left: 11vw;
+  margin-top: 21.5vh;
+}
+
+#pick-win-c {
+  position: absolute;
+  width: 17vw;
+  height: 25vh;
+  margin-left: 33.5vw;
+  margin-top: 28vh;
+}
+
+#pick-win-r {
+  position: absolute;
+  width: 4.75vw;
+  height: 35.5vh;
+  margin-left: 83.2vw;
+  margin-top: 21.7vh;
+}
+
+#frame-l {
+  position: absolute;
+  width: 6vw;
+  height: 43.5vh;
+  margin-left: 4.75vw;
+  margin-top: 16.5vh;
+}
+
+#frame-c {
+  position: absolute;
+  width: 16vw;
+  height: 25vh;
+  margin-left: 50vw;
+  margin-top: 28vh;
+}
+
+#frame-r {
+  position: absolute;
+  width: 5.85vw;
+  height: 43vh;
+  margin-left: 88.25vw;
+  margin-top: 16.5vh;
+}
+
+/* 3. ---Tablet Library Grid Styles--- */
+
+@media screen and (max-width: 810px) {
+  #deco-t {
+    width: 70vw;
+  }
+
+  #header {
+    height: 4rem;
+  }
+
+  #lightBox,
+  #lightBoxCredit {
+    top: 4rem;
+  }
+
+  #lightBox p,
+  #lightBoxCredit p {
+    font-size: 1.9rem;
+  }
+
+  #site {
+    font-size: 2rem;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  #link {
+    margin-left: 15px;
+  }
+
+  #clockButton {
+    width: 180px;
+    margin-left: 23.5vw;
+    margin-top: 58vh;
+  }
+
+  #middleWall {
+    width: 45vw;
+    margin-left: 12vw;
+  }
+
+  #window-c,
+  #dropbox-c {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+
+  #dropbox-c {
+    width: 23vw;
+    height: 24.5vh;
+    margin-top: 28.15vh;
+    margin-left: 50vw;
+  }
+
+  #pick-win-c {
+    width: 25vw;
+    margin-left: 27vw;
+  }
+
+  #rightWall {
+    margin-top: 17vh;
+    margin-left: 8vw;
+  }
+
+  #window-r,
+  #dropbox-r {
+    width: 15vw;
+    height: 50vh;
+    margin-left: 80vw;
+  }
+
+  #dropbox-r {
+    width: 7.5vw;
+    height: 42vh;
+    margin-top: 16vh;
+    margin-left: 86vw;
+  }
+
+  #pick-win-r {
+    width: 5vw;
+    height: 33vh;
+    margin-left: 80.8vw;
+  }
+
+  #leftWall {
+    width: 12vw;
+  }
+
+  #window-l,
+  #dropbox-l {
+    width: 18vw;
+    height: 50vh;
+    margin-left: 3vw;
+  }
+
+  #dropbox-l {
+    width: 9vw;
+    height: 42vh;
+    margin-top: 16vh;
+    margin-left: 5vw;
+  }
+
+  #pick-win-l {
+    width: 6.5vw;
+    height: 33.75vh;
+    margin-top: 21vh;
+    margin-left: 13.35vw;
+  }
+
+  #deco-star {
+    width: 15vw;
+    margin-left: 60vw;
+    margin-top: 14.5vh;
+  }
+
+  #deco-m-2 {
+    width: 20vw;
+    margin-left: 57vw;
+  }
+
+  #deco-L {
+    height: 30vh;
+  }
+
+  #deco-r {
+    width: 10vw;
+    margin-top: 55vh;
+  }
+
+  #deco-sofa {
+    width: 400px;
+    margin-top: 45vh;
+    margin-left: 25vw;
+  }
+
+  #deco-b {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
+  #frame-l {
+    width: 8vw;
+    height: 40vh;
+  }
+
+  #frame-c {
+    width: 23.85vw;
+  }
+
+  #frame-r {
+    width: 6.5vw;
+    height: 41vh;
+    margin-left: 86.5vw;
+  }
+}
+
+/* 4. ---Mobile Library Grid Styles--- */
+
+@media screen and (max-width: 425px) {
+  #deco-t,
+  #deco-m-2,
+  #deco-b {
+    display: none;
+  }
+
+  #header {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #site {
+    font-size: 1.5rem;
+    margin-left: 5.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  #link {
+    display: none;
+    border-top: solid 1px white;
+    flex-direction: column;
+    margin-left: 5.5rem;
+    margin-top: 10px;
+  }
+
+  #link p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding-top: 20px;
+  }
+
+  #link p:nth-child(2) {
+    padding-top: 0.1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  #lightBox,
+  #lightBoxCredit {
+    top: 11rem;
+  }
+
+  #lightBox p,
+  #lightBoxCredit p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #clockButton {
+    width: 95px;
+    margin-top: 62.5vh;
+    margin-left: 26.5vw;
+  }
+
+  #deco-marbel {
+    width: 11vh;
+    margin-top: 50vh;
+  }
+
+  #deco-star {
+    width: 10vw;
+    margin-top: 37vh;
+    margin-left: 65vw;
+  }
+
+  #deco-m {
+    margin-top: 46vh;
+    margin-left: 62.5vw;
+  }
+
+  #deco-sofa {
+    width: 170px;
+    margin-top: 57.5vh;
+    margin-left: 30vw;
+  }
+
+  #middleWall {
+    width: 35vw;
+    height: 12vh;
+    margin-top: 42vh;
+    margin-left: 15vw;
+  }
+
+  #window-c,
+  #dropbox-c {
+    width: 40vw;
+    height: 15vh;
+    margin-top: 40vh;
+    margin-left: 30vw;
+  }
+
+  #dropbox-c {
+    width: 18.25vw;
+    height: 11.75vh;
+    margin-top: 42.25vh;
+    margin-left: 50vw;
+  }
+
+  #pick-win-c {
+    width: 18.5vw;
+    height: 12vh;
+    margin-top: 42.25vh;
+    margin-left: 32vw;
+  }
+
+  #rightWall {
+    height: 20vh;
+    margin-top: 38vh;
+    margin-left: 15vw;
+  }
+
+  #window-r,
+  #dropbox-r {
+    width: 15vw;
+    height: 26.5vh;
+    margin-top: 33vh;
+    margin-left: 80vw;
+  }
+
+  #dropbox-r {
+    width: 8.5vw;
+    height: 22.5vh;
+    margin-top: 35.9vh;
+    margin-left: 85vw;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 92%);
+  }
+
+  #pick-win-r {
+    width: 5vw;
+    height: 17vh;
+    margin-top: 39.5vh;
+    margin-left: 80.8vw;
+  }
+
+  #leftWall {
+    height: 20vh;
+    margin-top: 38vh;
+  }
+
+  #window-l,
+  #dropbox-l {
+    width: 18vw;
+    height: 26.5vh;
+    margin-top: 33vh;
+  }
+
+  #dropbox-l {
+    width: 8.25vw;
+    height: 22.35vh;
+    margin-top: 36.15vh;
+    clip-path: polygon(0% 0%, 100% 12%, 100% 93%, 0% 100%);
+  }
+
+  #pick-win-l {
+    width: 6.75vw;
+    height: 18vh;
+    margin-top: 39vh;
+    margin-left: 13.35vw;
+  }
+
+  #frame-l {
+    width: 8vw;
+    height: 22.5vh;
+    margin-top: 36vh;
+  }
+
+  #frame-c {
+    width: 18vw;
+    height: 12.25vh;
+    margin-top: 42vh;
+  }
+
+  #frame-r {
+    width: 6.5vw;
+    height: 21.75vh;
+    margin-top: 36.5vh;
+  }
+}

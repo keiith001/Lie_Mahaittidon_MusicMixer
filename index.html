@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Natural's best albums | Music Mixer.</title>
+  </head>
+  <body>
+    <main id="theRoom" class="full-width-grid-con">
+      <h1 class="hidden">
+        Welcome to The Room, Relax and listen to natural sound, da best album we
+        ever had, is it?
+      </h1>
+      <header id="header" class="col-span-full">
+        <p id="site">Hear the wind sings</p>
+        <div id="link">
+          <p id="howtouse" class="">How to use</p>
+          <p id="credit">Who made this</p>
+        </div>
+        <div id="lightBox" class="hidden">
+          <p>Open the window, let nature in.</p>
+          <p>Pick the sounds that make you grin.</p>
+          <p>Click to mute what you don't desire.</p>
+          <p>Use the clock to set the time you require.</p>
+          <p>1080 height is the magic view.</p>
+        </div>
+        <div id="lightBoxCredit" class="hidden">
+          <p>Keith Lie Richard</p>
+          <p>Natchanon Nate Mahaittidon</p>
+        </div>
+      </header>
+
+      <img
+        id="aRoom"
+        sizes="100vw"
+        srcset="
+          images/the-room-background-mobile.png  425w,
+          images/the-room-background-desktop.png 800w
+        "
+        src="images/the-room-background-desktop.png"
+        alt="In the quiet room, the window are yours." />
+
+      <div id="deco" class="col-span-full">
+        <img id="deco-b" class="deco" src="images/deco-b.png" alt="" />
+        <img
+          id="deco-marbel"
+          class="deco"
+          src="images/deco-marbel.png"
+          alt="" />
+        <img id="deco-star" class="deco" src="images/deco-r-star.png" alt="" />
+        <img id="deco-t" class="deco" src="images/deco-t.png" alt="" />
+        <img id="deco-sofa" class="deco" src="images/chair.png" alt="" />
+      </div>
+
+      <section id="theWalls" class="col-span-full">
+        <h2 class="hidden">
+          Open the windows to hear the sound, the great things you ever heard
+        </h2>
+
+        <img
+          id="clockButton"
+          class="deco"
+          src="images/clock.png"
+          alt="Clock Button" />
+
+        <div id="leftWall"></div>
+        <div id="middleWall"></div>
+        <div id="rightWall"></div>
+
+        <div id="window">
+          <img id="window-l" class="deco" src="images/window-l.png" alt="" />
+          <img id="window-c" class="deco" src="images/window-c.png" alt="" />
+          <img id="window-r" class="deco" src="images/window-r.png" alt="" />
+
+          <div id="frame">
+            <img
+              id="frame-l"
+              class="frame hidden deco"
+              src="images/window-sliding-l.png"
+              alt=""
+              draggable="true" />
+            <img
+              id="frame-c"
+              class="frame hidden deco"
+              src="images/window-sliding-c.png"
+              alt=""
+              draggable="true" />
+            <img
+              id="frame-r"
+              class="frame hidden deco"
+              src="images/window-sliding-r.png"
+              alt=""
+              draggable="true" />
+          </div>
+        </div>
+
+        <div id="dropbox">
+          <div id="dropbox-l" class="dropzone"></div>
+          <div id="dropbox-c" class="dropzone"></div>
+          <div id="dropbox-r" class="dropzone"></div>
+        </div>
+
+        <div id="pickZone">
+          <div id="pick-l">
+            <img
+              id="pick-win-l"
+              class="pick deco"
+              src="images/window-sliding-l.png"
+              alt=""
+              draggable="true" />
+          </div>
+          <div id="pick-c">
+            <img
+              id="pick-win-c"
+              class="pick deco"
+              src="images/window-sliding-c.png"
+              alt=""
+              draggable="true" />
+          </div>
+          <div id="pick-r">
+            <img
+              id="pick-win-r"
+              class="pick deco"
+              src="images/window-sliding-r.png"
+              alt=""
+              draggable="true" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <audio id="l-sound" src="sound/l-day.wav" loop></audio>
+    <audio id="r-sound" src="sound/r-day.wav" loop></audio>
+    <audio id="c-sound" src="sound/c-day.wav" loop></audio>
+    <script src="js/main.js"></script>
+  </body>
+</html>

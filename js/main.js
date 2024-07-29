@@ -101,11 +101,23 @@ function closeAllWindows() {
   document.querySelector("#pick-win-l").classList.remove("hidden");
   lSound.pause();
 
+  frameLH.classList.add("hidden");
+  document.querySelector("#pick-win-l").classList.remove("hidden");
+  lSound.pause();
+
   frameC.classList.add("hidden");
   document.querySelector("#pick-win-c").classList.remove("hidden");
   cSound.pause();
 
+  frameCH.classList.add("hidden");
+  document.querySelector("#pick-win-c").classList.remove("hidden");
+  cSound.pause();
+
   frameR.classList.add("hidden");
+  document.querySelector("#pick-win-r").classList.remove("hidden");
+  rSound.pause();
+
+  frameRH.classList.add("hidden");
   document.querySelector("#pick-win-r").classList.remove("hidden");
   rSound.pause();
 }
@@ -117,11 +129,11 @@ function timeChange() {
     cSound.src = "sound/c-night.wav";
     rSound.src = "sound/r-night.wav";
     document.querySelector("#leftWall").style.backgroundImage =
-      "url(../images/gif/nightL.gif)";
+      "url(./images/gif/nightL.gif)";
     document.querySelector("#rightWall").style.backgroundImage =
-      "url(../images/gif/nightR.gif)";
+      "url(./images/gif/nightR.gif)";
     document.querySelector("#middleWall").style.backgroundImage =
-      "url(../images/gif/nightM.gif)";
+      "url(./images/gif/nightM.gif)";
     deco.forEach((element) => {
       element.classList.add("darkmode");
     });
@@ -130,11 +142,11 @@ function timeChange() {
     cSound.src = "sound/c-day.wav";
     rSound.src = "sound/r-day.wav";
     document.querySelector("#leftWall").style.backgroundImage =
-      "url(../images/gif/dayL.gif)";
+      "url(./images/gif/dayL.gif)";
     document.querySelector("#rightWall").style.backgroundImage =
-      "url(../images/gif/dayR.gif)";
+      "url(./images/gif/dayR.gif)";
     document.querySelector("#middleWall").style.backgroundImage =
-      "url(../images/gif/dayM.gif)";
+      "url(./images/gif/dayM.gif)";
     deco.forEach((element) => {
       element.classList.remove("darkmode");
     });

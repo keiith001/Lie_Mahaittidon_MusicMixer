@@ -64,6 +64,7 @@ html {
 /* 3. ---Tablet Library Grid Styles--- */
 
 @media screen and (max-width: 810px) {
+  
   .grid-con {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-column-gap: 20px;

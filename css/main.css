@@ -231,7 +231,7 @@
 
 #dropbox-l {
   position: absolute;
-  width: 6.75vw;
+  width: 4vw;
   height: 44vh;
   margin-top: 16vh;
   margin-left: 4.5vw;
@@ -240,18 +240,44 @@
 
 #dropbox-c {
   position: absolute;
-  width: 16.25vw;
+  width: 7.5vw;
   height: 24.5vh;
   margin-top: 28.15vh;
-  margin-left: 49.75vw;
+  margin-left: 58vw;
 }
 
 #dropbox-r {
   position: absolute;
-  width: 6.8vw;
+  width: 4vw;
   height: 44.25vh;
   margin-top: 15.9vh;
-  margin-left: 87.85vw;
+  margin-left: 91vw;
+  clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 93%);
+}
+
+#dropbox-l-half {
+  position: absolute;
+  width: 4vw;
+  height: 44vh;
+  margin-top: 16vh;
+  margin-left: 8vw;
+  clip-path: polygon(0% 0%, 100% 13%, 100% 93%, 0% 100%);
+}
+
+#dropbox-c-half {
+  position: absolute;
+  width: 15vw;
+  height: 24.5vh;
+  margin-top: 28.15vh;
+  margin-left: 43vw;
+}
+
+#dropbox-r-half {
+  position: absolute;
+  width: 4vw;
+  height: 44.25vh;
+  margin-top: 15.9vh;
+  margin-left: 87vw;
   clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 93%);
 }
 
@@ -305,6 +331,30 @@
   height: 43vh;
   margin-left: 88.25vw;
   margin-top: 16.5vh;
+}
+
+#frame-l-half {
+  position: absolute;
+  width: 6vw;
+  height: 38vh;
+  margin-left: 8vw;
+  margin-top: 20vh;
+}
+
+#frame-c-half {
+  position: absolute;
+  width: 16vw;
+  height: 25vh;
+  margin-left: 42vw;
+  margin-top: 28vh;
+}
+
+#frame-r-half {
+  position: absolute;
+  width: 6vw;
+  height: 38vh;
+  margin-left: 85.5vw;
+  margin-top: 20vh;
 }
 
 /* 3. ---1420 */

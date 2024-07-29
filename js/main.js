@@ -8,6 +8,9 @@ const tChange = document.querySelector("#clockButton");
 const frameL = document.querySelector("#frame-l");
 const frameC = document.querySelector("#frame-c");
 const frameR = document.querySelector("#frame-r");
+const frameLH = document.querySelector("#frame-l-half");
+const frameCH = document.querySelector("#frame-c-half");
+const frameRH = document.querySelector("#frame-r-half");
 const deco = document.querySelectorAll(".deco");
 const howtouse = document.querySelector("#howtouse");
 const credit = document.querySelector("#credit");
@@ -38,12 +41,27 @@ function dropped(e) {
   if (dropzone.id === "dropbox-l") {
     frameL.classList.toggle("hidden");
     lSound.play();
+    lSound.volume = 1;
+  } else if (dropzone.id === "dropbox-l-half") {
+    frameLH.classList.toggle("hidden");
+    lSound.play();
+    lSound.volume = 0.5;
   } else if (dropzone.id === "dropbox-c") {
     frameC.classList.toggle("hidden");
     cSound.play();
+    cSound.volume = 1;
+  } else if (dropzone.id === "dropbox-c-half") {
+    frameCH.classList.toggle("hidden");
+    cSound.play();
+    cSound.volume = 0.5;
   } else if (dropzone.id === "dropbox-r") {
     frameR.classList.toggle("hidden");
     rSound.play();
+    rSound.volume = 1;
+  } else if (dropzone.id === "dropbox-r-half") {
+    frameRH.classList.toggle("hidden");
+    rSound.play();
+    rSound.volume = 0.5;
   }
 
   draggedPiece = null;
@@ -55,12 +73,24 @@ function closeWindow(e) {
     frameL.classList.add("hidden");
     document.querySelector("#pick-win-l").classList.remove("hidden");
     lSound.pause();
+  } else if (aWindow.id === "dropbox-l-half") {
+    frameLH.classList.add("hidden");
+    document.querySelector("#pick-win-l").classList.remove("hidden");
+    lSound.pause();
   } else if (aWindow.id === "dropbox-c") {
     frameC.classList.add("hidden");
     document.querySelector("#pick-win-c").classList.remove("hidden");
     cSound.pause();
+  } else if (aWindow.id === "dropbox-c-half") {
+    frameCH.classList.add("hidden");
+    document.querySelector("#pick-win-c").classList.remove("hidden");
+    cSound.pause();
   } else if (aWindow.id === "dropbox-r") {
     frameR.classList.add("hidden");
+    document.querySelector("#pick-win-r").classList.remove("hidden");
+    rSound.pause();
+  } else if (aWindow.id === "dropbox-r-half") {
+    frameRH.classList.add("hidden");
     document.querySelector("#pick-win-r").classList.remove("hidden");
     rSound.pause();
   }

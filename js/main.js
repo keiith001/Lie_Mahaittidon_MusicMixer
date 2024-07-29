@@ -92,10 +92,6 @@ function timeChange() {
       "url(../images/gif/nightR.gif)";
     document.querySelector("#middleWall").style.backgroundImage =
       "url(../images/gif/nightM.gif)";
-    document.querySelector(
-      "#aRoom"
-    ).srcset = `images/the-room-background-mobile-night.png  425w,
-          images/the-room-background-desktop-night.png 800w`;
     deco.forEach((element) => {
       element.classList.add("darkmode");
     });
@@ -109,17 +105,13 @@ function timeChange() {
       "url(../images/gif/dayR.gif)";
     document.querySelector("#middleWall").style.backgroundImage =
       "url(../images/gif/dayM.gif)";
-    document.querySelector("#aRoom").src =
-      "images/the-room-background-desktop.png";
-    document.querySelector(
-      "#aRoom"
-    ).srcset = `images/the-room-background-mobile.png  425w,
-              images/the-room-background-desktop.png 800w`;
     deco.forEach((element) => {
       element.classList.remove("darkmode");
     });
   }
 }
+
+timeChange();
 
 function showHowToUse() {
   document.querySelector("#lightBox").classList.toggle("hidden");
@@ -137,7 +129,6 @@ function showCredit() {
 }
 
 function openMenu() {
-  console.log("this button is work.");
   const linkElement = document.querySelector("#link");
 
   if (
@@ -147,6 +138,8 @@ function openMenu() {
     linkElement.style.display = "block";
   } else {
     linkElement.style.display = "none";
+    document.querySelector("#lightBox").classList.add("hidden");
+    document.querySelector("#lightBoxCredit").classList.add("hidden");
   }
 }
 

@@ -66,6 +66,9 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  background-image: url("/images/the-room-background-desktop.png");
+  background-size: 100% 100%;
+  object-fit: fill;
 }
 
 #theWalls {
@@ -74,7 +77,7 @@
 }
 
 .darkmode {
-  filter: brightness(60%);
+  filter: brightness(30%);
 }
 
 #clockButton {
@@ -226,11 +229,6 @@
   position: absolute;
 }
 
-.dropzone {
-  background-color: aquamarine;
-  opacity: 0;
-}
-
 #dropbox-l {
   position: absolute;
   width: 6.75vw;
@@ -307,6 +305,16 @@
   height: 43vh;
   margin-left: 88.25vw;
   margin-top: 16.5vh;
+}
+
+/* 3. ---1420 */
+@media screen and (max-width: 1440px) {
+  #deco-sofa {
+    width: 400px;
+  }
+  #clockButton {
+    margin-top: 58vh;
+  }
 }
 
 /* 3. ---Tablet Library Grid Styles--- */
@@ -485,8 +493,8 @@
   }
 
   #site {
-    font-size: 1.5rem;
-    margin-left: 5.5rem;
+    font-size: 2rem;
+    margin-left: 3rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
@@ -497,11 +505,12 @@
     display: none;
     border-top: solid 1px white;
     flex-direction: column;
-    margin-left: 5.5rem;
+    margin-left: 3rem;
     margin-top: 10px;
   }
 
   #link p {
+    font-size: 1.5rem;
     margin: 0;
     margin-bottom: 0.5rem;
     padding-top: 20px;
@@ -514,18 +523,29 @@
 
   #lightBox,
   #lightBoxCredit {
-    top: 11rem;
+    top: 13rem;
+    padding: 1.5rem 3rem;
   }
 
   #lightBox p,
   #lightBoxCredit p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin-left: 0;
     margin-bottom: 0.5rem;
   }
 
+  #aRoom {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/the-room-background-mobile.png");
+    background-size: 100% 100%;
+    object-fit: fill;
+  }
+
   #clockButton {
-    width: 95px;
-    margin-top: 62.5vh;
+    width: 90px;
+    margin-top: 55.5vh;
     margin-left: 26.5vw;
   }
 
@@ -546,8 +566,8 @@
   }
 
   #deco-sofa {
-    width: 170px;
-    margin-top: 57.5vh;
+    width: 180px;
+    margin-top: 52vh;
     margin-left: 30vw;
   }
 

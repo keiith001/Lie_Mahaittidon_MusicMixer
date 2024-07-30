@@ -1,3 +1,27 @@
+/* Main Outline */
+/* Desktop Style */
+/*  
+
+-Header
+-Lightbox
+-Main Room
+-Dark Mode
+-Clock Button (Day/Night controller)
+-Wall
+-Decoration
+-Window
+-Dropzone
+-Pickzone
+-Frame
+*/
+
+/* Media Query 
+1440 w
+1920 w
+Tablet
+Mobile
+*/
+
 #header {
   display: flex;
   justify-items: left;
@@ -44,7 +68,7 @@
   position: absolute;
   width: 100vw;
   height: auto;
-  padding: 2rem 5rem 2rem 5rem;
+  padding: 2rem 5rem;
   background-color: yellow;
   top: 4rem;
 }
@@ -83,7 +107,7 @@
 #clockButton {
   position: absolute;
   width: 180px;
-  margin-top: 55vh;
+  margin-top: 58vh;
   margin-left: 34vw;
   cursor: pointer;
 }
@@ -118,8 +142,8 @@
 }
 
 #deco {
-  width: 100vw;
   position: absolute;
+  width: 100vw;
 }
 
 #deco-m {
@@ -146,23 +170,24 @@
 #deco-r {
   position: absolute;
   width: 10vh;
-  margin-left: 78.5vw;
   margin-top: 45vh;
+  margin-left: 78.5vw;
 }
 
 #deco-marbel {
   position: absolute;
   width: 30vh;
-  margin-left: 25vw;
   margin-top: 45vh;
+  margin-left: 25vw;
 }
 
 #deco-sofa {
   position: absolute;
-  width: 350px;
-  margin-top: 47.5vh;
-  margin-left: 37vw;
+  width: 400px;
+  margin-top: 45.5vh;
+  margin-left: 34vw;
   pointer-events: none;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -178,8 +203,8 @@
   width: 40vw;
   height: 9.5vh;
   opacity: 0.85;
-  margin-left: 18.5vw;
   margin-top: 3.25vh;
+  margin-left: 18.5vw;
 }
 
 #deco-m-2 {
@@ -193,8 +218,8 @@
 #deco-text {
   position: absolute;
   width: 300px;
-  margin-left: 50vw;
   margin-top: 55vh;
+  margin-left: 50vw;
 }
 
 #window {
@@ -213,8 +238,8 @@
   position: absolute;
   width: 35vw;
   height: 30vh;
-  margin-left: 32.5vw;
   margin-top: 24.5vh;
+  margin-left: 32.5vw;
 }
 
 #window-r {
@@ -231,7 +256,7 @@
 
 #dropbox-l {
   position: absolute;
-  width: 4vw;
+  width: 5vw;
   height: 44vh;
   margin-top: 16vh;
   margin-left: 4.5vw;
@@ -240,28 +265,28 @@
 
 #dropbox-c {
   position: absolute;
-  width: 7.5vw;
+  width: 10.5vw;
   height: 24.5vh;
   margin-top: 28.15vh;
-  margin-left: 58vw;
+  margin-left: 55vw;
 }
 
 #dropbox-r {
   position: absolute;
-  width: 4vw;
+  width: 6vw;
   height: 44.25vh;
   margin-top: 15.9vh;
-  margin-left: 91vw;
+  margin-left: 89.25vw;
   clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 93%);
 }
 
 #dropbox-l-half {
   position: absolute;
   width: 4vw;
-  height: 44vh;
-  margin-top: 16vh;
-  margin-left: 8vw;
-  clip-path: polygon(0% 0%, 100% 13%, 100% 93%, 0% 100%);
+  height: 37vh;
+  margin-top: 20vh;
+  margin-left: 9.5vw;
+  clip-path: polygon(0% 0%, 100% 10%, 100% 95%, 0% 100%);
 }
 
 #dropbox-c-half {
@@ -269,16 +294,16 @@
   width: 15vw;
   height: 24.5vh;
   margin-top: 28.15vh;
-  margin-left: 43vw;
+  margin-left: 40vw;
 }
 
 #dropbox-r-half {
   position: absolute;
   width: 4vw;
-  height: 44.25vh;
-  margin-top: 15.9vh;
-  margin-left: 87vw;
-  clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 93%);
+  height: 37vh;
+  margin-top: 20.25vh;
+  margin-left: 85.35vw;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 96%);
 }
 
 #pickZone {
@@ -335,10 +360,10 @@
 
 #frame-l-half {
   position: absolute;
-  width: 6vw;
-  height: 38vh;
+  width: 5.25vw;
+  height: 39.5vh;
   margin-left: 8vw;
-  margin-top: 20vh;
+  margin-top: 19vh;
 }
 
 #frame-c-half {
@@ -351,24 +376,39 @@
 
 #frame-r-half {
   position: absolute;
-  width: 6vw;
-  height: 38vh;
+  width: 5.15vw;
+  height: 39vh;
   margin-left: 85.5vw;
-  margin-top: 20vh;
+  margin-top: 19.5vh;
 }
 
-/* 3. ---1420 */
-@media screen and (max-width: 1440px) {
+/* ---1420 */
+@media screen and (min-width: 1440px) {
   #deco-sofa {
     width: 400px;
   }
+
   #clockButton {
     margin-top: 58vh;
   }
 }
 
-/* 3. ---Tablet Library Grid Styles--- */
+/* ---1920 */
+@media screen and (min-width: 1920px) {
+  #deco-sofa {
+    width: 500px;
+    margin-top: 45vh;
+    margin-left: 37vw;
+  }
 
+  #clockButton {
+    width: 200px;
+    margin-top: 58vh;
+    margin-left: 38vw;
+  }
+}
+
+/* ---Tablet */
 @media screen and (max-width: 810px) {
   #deco-t {
     width: 70vw;
@@ -448,6 +488,26 @@
     margin-left: 86vw;
   }
 
+  #dropbox-l-half {
+    width: 4.7vw;
+    height: 34.25vh;
+    margin-top: 20.5vh;
+    margin-left: 12.8vw;
+  }
+
+  #dropbox-c-half {
+    width: 19vw;
+    margin-top: 28.15vh;
+    margin-left: 38vw;
+  }
+
+  #dropbox-r-half {
+    width: 4vw;
+    height: 35vh;
+    margin-top: 20.25vh;
+    margin-left: 83.45vw;
+  }
+
   #pick-win-r {
     width: 5vw;
     height: 33vh;
@@ -524,10 +584,28 @@
     height: 41vh;
     margin-left: 86.5vw;
   }
+
+  #frame-l-half {
+    width: 7vw;
+    height: 37vh;
+    margin-left: 10vw;
+    margin-top: 19vh;
+  }
+
+  #frame-c-half {
+    width: 25vw;
+  }
+
+  #frame-r-half {
+    position: absolute;
+    width: 5.8vw;
+    height: 37vh;
+    margin-left: 83.5vw;
+    margin-top: 18.95vh;
+  }
 }
 
-/* 4. ---Mobile Library Grid Styles--- */
-
+/* ---Mobile */
 @media screen and (max-width: 425px) {
   #deco-t,
   #deco-m-2,
@@ -641,6 +719,7 @@
     height: 11.75vh;
     margin-top: 42.25vh;
     margin-left: 50vw;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 92%);
   }
 
   #pick-win-c {
@@ -669,7 +748,6 @@
     height: 22.5vh;
     margin-top: 35.9vh;
     margin-left: 85vw;
-    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 92%);
   }
 
   #pick-win-r {
@@ -696,6 +774,26 @@
     height: 22.35vh;
     margin-top: 36.15vh;
     clip-path: polygon(0% 0%, 100% 12%, 100% 93%, 0% 100%);
+  }
+
+  #dropbox-l-half {
+    width: 4vw;
+    height: 19vh;
+    margin-top: 38.25vh;
+    margin-left: 12vw;
+  }
+
+  #dropbox-c-half {
+    height: 11vh;
+    margin-top: 42.5vh;
+    margin-left: 40vw;
+  }
+
+  #dropbox-r-half {
+    width: 4vw;
+    height: 18vh;
+    margin-top: 38.5vh;
+    margin-left: 83.5vw;
   }
 
   #pick-win-l {
